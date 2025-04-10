@@ -2,19 +2,104 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: 'Product Sans Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Product Sans Regular'), url('./fonts/ProductSans-Regular.woff') format('woff');
 }
+  
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: 'Product Sans Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Product Sans Italic'), url('./fonts/ProductSans-Italic.woff') format('woff');
+}
+  
+
+@font-face {
+  font-family: 'Product Sans Thin Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Product Sans Thin Regular'), url('./fonts/ProductSans-Thin.woff') format('woff');
+}
+  
+
+@font-face {
+  font-family: 'Product Sans Light Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Product Sans Light Regular'), url('./fonts/ProductSans-Light.woff') format('woff');
+}
+  
+
+@font-face {
+  font-family: 'Product Sans Medium Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Product Sans Medium Regular'), url('./fonts/ProductSans-Medium.woff') format('woff');
+}
+  
+
+@font-face {
+  font-family: 'Product Sans Black Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Product Sans Black Regular'), url('./fonts/ProductSans-Black.woff') format('woff');
+}
+  
+
+@font-face {
+  font-family: 'Product Sans Thin Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Product Sans Thin Italic'), url('./fonts/ProductSans-ThinItalic.woff') format('woff');
+}
+  
+
+@font-face {
+  font-family: 'Product Sans Light Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Product Sans Light Italic'), url('./fonts/ProductSans-LightItalic.woff') format('woff');
+}
+  
+
+@font-face {
+  font-family: 'Product Sans Medium Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Product Sans Medium Italic'), url('./fonts/ProductSans-MediumItalic.woff') format('woff');
+}
+  
+
+@font-face {
+  font-family: 'Product Sans Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Product Sans Bold'), url('./fonts/ProductSans-Bold.woff') format('woff');
+}
+  
+
+@font-face {
+  font-family: 'Product Sans Bold Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Product Sans Bold Italic'), url('./fonts/ProductSans-BoldItalic.woff') format('woff');
+}
+  
+
+@font-face {
+  font-family: 'Product Sans Black Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Product Sans Black Italic'), url('./fonts/ProductSans-BlackItalic.woff') format('woff');
 }
 
 .App-header {
-  background-color: #282c34;
+  background-image: url('https://images.squarespace-cdn.com/content/v1/5fa19d5f3c629d222e98830a/1614180164910-GVFRHD77GV0G78A5SC0B/2.jpg');
+  background-size: cover;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,17 +107,6 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  font-family: 'Product Sans Regular', sans-serif;
+  letter-spacing: 0.1rem;
 }
