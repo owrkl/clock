@@ -1,0 +1,36 @@
+name: Deploy to Google Cloud Storage
+
+on:
+  push:
+    branches:
+      - main # Or your main development branch
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'lts/*'
+
+      - name: Install dependencies
+        run: npm install # Or yarn install
+
+      - name: Build React app
+        run: npm run build # Or yarn build
+
+      - name: Upload to Google Cloud Storage
+        uses: google-github-actions/upload-cloud-storage@v2
+        with:
+          credentials: ${{ secrets.GCLOUD_SERVICE_ACCOUNT_KEY }}
+          bucket_name: mywebfiles-a # Replace with your GCS bucket name
+          source_dir: build # Or the directory containing your built static files
+          destination_dir: / # Optional: Specify a prefix in your bucket
+          public: true # Make uploaded files publicly readable
+          gzip: true # Optional: Enable gzip compression for eligible files
+          cache_control: 'public, max-age=31536000' # Optional: Set cache headers
